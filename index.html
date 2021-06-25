@@ -7,6 +7,73 @@
     <title>Document</title>
 </head>
 <body>
-    
+   <h1 style="text-align: center;font-size: 50px;padding-top: 50px;">Hello Dom</h1>
+
+   <style>
+       :root{
+           --bg-gray: #ddd;
+           --padding-top: 20px;
+       }
+       ul{
+           margin: 0;
+           padding: 0;
+           list-style: decimal;
+       }
+       li{
+           margin: 20px 0px;
+       }
+       li button{
+           float: right;
+           cursor: pointer;
+       }
+       .searchItem {
+    background: #333;
+    padding: 15px;
+    color: #fff;
+    margin-bottom: 50px;
+}
+
+.searchItem label {
+    font-size: 20px;
+    font-family: sans-serif;
+    margin-right: 26px;
+}
+
+.searchItem input {
+    padding: 5px 20px;
+    width: 215px;
+    font-size: 14px;
+}
+.notFound{
+    color: red;
+    display: none;
+}
+   </style>
+
+   <div id="app" class="app">
+       <div class="searchItem">
+        <form>
+            <label>Search Items</label>
+            <input id="searchFilter" type="text" placeholder="Search Items...">
+        </form>
+       </div>
+
+       <div class="additemList">
+        <form id="addForm">
+            <input id="item" class="form-control" type="text">
+            <input type="submit" value="submit">
+       </div>
+
+       </form>
+       <h2>Items <span class="notFound">Not found</span></h2>
+       <ul id="items" class="item">
+           <li class="list-group-item">Item <button class="button-class delete">X</button></li>
+           <li class="list-group-item">Item <button class="button-class delete">X</button></li>
+           <li class="list-group-item">Item <button class="button-class delete">X</button></li>
+           <li class="list-group-item">Item <button class="button-class delete">X</button></li>
+       </ul>
+   </div>
+
+<script src="dom.js"></script>
 </body>
 </html>
